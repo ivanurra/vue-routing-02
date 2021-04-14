@@ -4,6 +4,9 @@
         <hr/>
         <br/>
         <button class="btn" @click="fetchApi">Fetch API</button>
+        <div class="titles" v-for="item in arrayBlog" :key="item.id">
+            {{item.id}} - {{ item.title }}
+        </div>
     </div>
 </template>
 
@@ -25,6 +28,7 @@ export default {
                 const data = await fetch(`https://jsonplaceholder.typicode.com/posts`)
                 const array = await data.json()
                 console.log(array)
+                this.arrayBlog = array;
             } catch (error) {
                 console.log(error)
             }
@@ -38,5 +42,10 @@ export default {
     width: 90px;
     background-color: rgb(10, 69, 233);
     color: white;
+}
+.titles {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 6px;
 }
 </style>
