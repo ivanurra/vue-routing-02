@@ -1,5 +1,16 @@
 <template>
   <div class="about">
-    <h1>About us</h1>
+    <Title text="About" />
   </div>
 </template>
+
+<script>
+import Title from '../components/Title.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    Title
+  }
+}
+</script>
