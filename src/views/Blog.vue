@@ -1,5 +1,5 @@
 <template>
-  <Title text="Blog Title" />
+  <Title text="Blog title" />
 </template>
 
 <script>
