@@ -33,3 +33,12 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+p {
+    text-align: left;
+}
+h3{
+    text-transform: uppercase;
+}
+</style>
