@@ -3,7 +3,7 @@
         <Title text="Articles" />
         <hr/>
         <br/>
-        <button class="btn" @click="fetchApi">Fetch API</button>
+        <!-- <button class="btn" @click="fetchApi">Fetch API</button> -->
         <div class="titles" v-for="item in arrayBlog" :key="item.id">
             {{item.id}} - {{ item.title }}
         </div>
@@ -33,6 +33,9 @@ export default {
                 console.log(error)
             }
         }
+    },
+    created() {
+        this.fetchApi()
     }
 }
 </script>
